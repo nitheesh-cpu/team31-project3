@@ -19,6 +19,7 @@ export default defineConfig({
         changeOrigin: true,
       },
     },
+    allowedHosts: ['localhost', 'team31-project3.onrender.com'],
   },
   preview: {
     host: '0.0.0.0',
