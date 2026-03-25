@@ -1,0 +1,80 @@
+name: 🚀 Project Task (Product & Sprint)
+description: Use this for all tasks to ensure Burndown and Backlog data is captured.
+labels: ["backlog"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Task Definition
+        Fill this out for the **Product Backlog** initially, then update as it moves to a **Sprint**.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Task Description
+      placeholder: What needs to be done?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - P0 (Critical)
+        - P1 (High)
+        - P2 (Medium)
+        - P3 (Low)
+    validations:
+      required: true
+
+  - type: input
+    id: dependencies
+    attributes:
+      label: Dependencies
+      placeholder: "e.g., Blocks #12, Depends on #10"
+    validations:
+      required: true
+
+  - type: input
+    id: est_hours
+    attributes:
+      label: Initial Time Estimate (Hours)
+      placeholder: "e.g., 8"
+    validations:
+      required: true
+
+  - type: input
+    id: remaining_hours
+    attributes:
+      label: Current Remaining Hours (For Burndown)
+      placeholder: "Update this after every SCRUM meeting"
+    validations:
+      required: true
+
+  - type: input
+    id: actual_hours
+    attributes:
+      label: Actual Time Spent (Hours)
+      placeholder: "Update as work progresses"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: Current Status
+      options:
+        - Product Backlog
+        - Sprint Backlog (Ready)
+        - In Progress
+        - In Review
+        - Done
+    validations:
+      required: true
+
+  - type: textarea
+    id: scrum_notes
+    attributes:
+      label: SCRUM Meeting Updates
+      placeholder: "Notes from the 3+ required SCRUM meetings regarding this task."
